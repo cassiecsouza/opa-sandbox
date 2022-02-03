@@ -1,6 +1,6 @@
 pipeline:
-    name: <UPDATE ME>
-    identifier: <UPDATE ME>
+    name: opa_pipeline
+    identifier: opa_pipeline
     projectIdentifier: <UPDATE ME>
     orgIdentifier: default
     tags: {}
