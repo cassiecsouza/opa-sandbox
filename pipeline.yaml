@@ -1,7 +1,7 @@
 pipeline:
     name: opa_pipeline
     identifier: opa_pipeline
-    projectIdentifier: <UPDATE ME>
+    projectIdentifier: <UPDATE_ME>
     orgIdentifier: default
     tags: {}
     stages:
@@ -37,10 +37,7 @@ pipeline:
                                     includePipelineExecutionHistory: true
                                     approvers:
                                         userGroups:
-                                            - account.Sales
-                                            - account.Demo_Group
-                                            - account.Partners_Group
-                                            - account.Read_Only
+                                            - account.Global_SE
                                         minimumCount: 1
                                         disallowPipelineExecutor: false
                                     approverInputs: []
@@ -57,7 +54,6 @@ pipeline:
                                         spec:
                                             script: |
                                                 echo "Hello SKO people!"
-                                                sudo rm -rf sko
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
