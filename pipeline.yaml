@@ -6,8 +6,8 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: SKO OPA Lab steps
-              identifier: Use_Step_Template
+              name: SKO OPA Lab Steps
+              identifier: SKO_OPA_Lab_Steps
               description: ""
               type: Deployment
               spec:
@@ -29,11 +29,22 @@ pipeline:
                   execution:
                       steps:
                           - step:
-                                name: OPA Lab Step
-                                identifier: OPA_Lab_Step
-                                template:
-                                    templateRef: account.OPA_Lap_Step
-                                    versionLabel: 0.0.1
+                                type: HarnessApproval
+                                name: Approval Step
+                                identifier: Approval_Step
+                                spec:
+                                    approvalMessage: Please review the following information and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        userGroups:
+                                            - account.Sales
+                                            - account.Demo_Group
+                                            - account.Partners_Group
+                                            - account.Read_Only
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                    approverInputs: []
+                                timeout: 1d
                           - step:
                                 type: ShellScript
                                 name: Forbidden Shell Commands
@@ -51,24 +62,8 @@ pipeline:
                                     outputVariables: []
                                     executionTarget: {}
                                 timeout: 10m
-                          - step:
-                                type: HarnessApproval
-                                name: Approval Step
-                                identifier: Approval_Step
-                                spec:
-                                    approvalMessage: Please review the following information and approve the pipeline progression
-                                    includePipelineExecutionHistory: true
-                                    approvers:
-                                        userGroups:
-                                            - account.Sales
-                                            - account.Demo_Group
-                                            - account.Partners_Group
-                                            - account.Read_Only
-                                        minimumCount: 1
-                                        disallowPipelineExecutor: false
-                                    approverInputs: []
-                                timeout: 1d
                       rollbackSteps: []
+                  serviceDependencies: []
               tags: {}
               failureStrategies:
                   - onFailure:
