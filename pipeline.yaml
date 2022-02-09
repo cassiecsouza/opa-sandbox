@@ -18,7 +18,10 @@ pipeline:
                           spec:
                               variables: []
                   infrastructure:
-                      environmentRef: SKO
+                      environment:
+                          name: SKO
+                          identifier: SKO
+                          type: Production
                       infrastructureDefinition:
                           type: KubernetesDirect
                           spec:
