@@ -2,7 +2,7 @@ pipeline:
     name: payment-service
     identifier: paymentservice
     allowStageExecutions: false
-    projectIdentifier: cassieciebootcamp
+    projectIdentifier: cassiebootcamp
     orgIdentifier: default
     tags: {}
     properties:
