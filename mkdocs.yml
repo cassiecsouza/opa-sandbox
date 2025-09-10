@@ -1,0 +1,9 @@
+site_name: 'Example Documentation'
+repo_url: https://github.com/cassiecsouza/opa-sandbox
+edit_uri: docs
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
