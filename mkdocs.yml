@@ -5,7 +5,7 @@ edit_uri: docs
 nav:
   - Overview:
     - Home: index.md
-    - What is Backstage?: 'overview/what-is-backstage.md'
+    - What is Backstage?: 'https://backstage.io'
     - Architecture overview: 'overview/architecture-overview.md'
     - Project Roadmap: 'overview/roadmap.md'
     - Vision: 'overview/vision.md'
