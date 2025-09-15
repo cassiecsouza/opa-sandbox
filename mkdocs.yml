@@ -3,7 +3,7 @@ repo_url: https://github.com/cassiecsouza/opa-sandbox
 
 nav:
   - What is Backstage?: 'https://backstage.io'
-  - Architecture overview: 'docs/README.md'
+  - Architecture overview: 'README.md'
 plugins:
   - techdocs-core
 
