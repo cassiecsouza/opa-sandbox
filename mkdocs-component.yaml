@@ -1,0 +1,13 @@
+apiVersion: harness.io/v1
+kind: Component
+name: Docs Example
+identifier: docs_example
+type: documentation
+owner: user:account/cassie.souza@harness.io
+spec:
+  lifecycle: sandbox
+metadata:
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/cassiecsouza/opa-sandbox/tree/feature/test
+  tags:
+    - pov
