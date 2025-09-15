@@ -2,10 +2,8 @@ site_name: 'Example Documentation'
 repo_url: https://github.com/cassiecsouza/opa-sandbox
 
 nav:
-  - Overview:
-    - Home: README.md
-    - What is Backstage?: 'https://backstage.io'
-    - Architecture overview: 'overview/architecture-overview.md'
+  - What is Backstage?: 'https://backstage.io'
+  - Architecture overview: 'overview/architecture-overview.md'
 plugins:
   - techdocs-core
 
